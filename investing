@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech15 Momentum Lab - Strategia Mensile Tech USA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            line-height: 1.6; 
+            color: #1a1a1a; 
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #1a472a 0%, #2d5a3a 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url('https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/d44cf6b0-239d-4b3a-a83d-525375935167') center/cover;
+            opacity: 0.1;
+        }
+        .hero-content { position: relative; z-index: 2; }
+        .hero h1 { 
+            font-size: clamp(2.5rem, 5vw, 4rem); 
+            font-weight: 700; 
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #fff, #a8e6cf);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero .subtitle { 
+            font-size: 1.3rem; 
+            opacity: 0.95; 
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .price-badge {
+            display: inline-block;
+            background: #ffd700;
+            color: #1a472a;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            box-shadow: 0 10px 30px rgba(255,215,0,0.3);
+            margin-bottom: 2rem;
+        }
+        .cta-button {
+            display: inline-block;
+            background: #ffd700;
+            color: #1a472a;
+            padding: 1.2rem 3rem;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            box-shadow: 0 10px 30px rgba(255,215,0,0.4);
+        }
+        .cta-button:hover { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(255,215,0,0.5); }
+
+        /* Sezioni */
+        section { padding: 80px 0; }
+        .section-title { 
+            font-size: 2.5rem; 
+            text-align: center; 
+            margin-bottom: 3rem; 
+            color: #1a472a;
+            font-weight: 600;
+        }
+
+        /* Cards */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .feature-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s;
+            height: 100%;
+        }
+        .feature-card:hover { transform: translateY(-10px); box-shadow: 0 30px 80px rgba(0,0,0,0.15); }
+        .feature-icon { font-size: 3rem; margin-bottom: 1rem; }
+        .feature-card h3 { color: #1a472a; margin-bottom: 1rem; font-size: 1.3rem; }
+
+        /* Performance */
+        .performance-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        .stat-card {
+            background: linear-gradient(135deg, #1a472a, #2d5a3a);
+            color: white;
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+        }
+        .stat-number { font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .stat-label { opacity: 0.9; }
+
+        /* Disclaimer */
+        .disclaimer {
+            background: #fee2e2;
+            border-left: 5px solid #ef4444;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: #a8a8a8;
+            text-align: center;
+            padding: 3rem 0 1rem;
+        }
+        .footer-links { margin-top: 1rem; }
+        .footer-links a { color: #a8e6cf; margin: 0 1rem; text-decoration: none; }
+
+        @media (max-width: 768px) {
+            .hero { padding: 60px 0; }
+            section { padding: 60px 0; }
+            .features-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Tech15 Momentum Lab</h1>
+                <p class="subtitle">Strategia mensile AI-driven: 15 titoli tech USA selezionati tra 500 aziende. Storicamente +29% annuo vs S&P 500.</p>
+                <div class="price-badge">9€/mese</div>
+                <a href="#iscriviti" class="cta-button">Iscriviti Ora</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Come Funziona -->
+    <section id="come-funziona">
+        <div class="container">
+            <h2 class="section-title">Come Funziona</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h3>Analisi 500 Aziende</h3>
+                    <p>Ogni mese valutiamo fondamentali, momentum e liquidità di 500 società tech USA.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>AI + Algoritmi</h3>
+                    <p>Intelligenza artificiale seleziona i migliori 15 titoli con controlli di rischio.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Ribilanciamento Mensile</h3>
+                    <p>Nuovo portafoglio ogni 30 giorni: ingressi, uscite, pesi ottimizzati.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance -->
+    <section id="performance" style="background: #f8fafc;">
+        <div class="container">
+            <h2 class="section-title">Performance Storica (2013-2025)</h2>
+            <div class="performance-stats">
+                <div class="stat-card">
+                    <div class="stat-number">+2.355%</div>
+                    <div class="stat-label">Rendimento Totale</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">29,45%</div>
+                    <div class="stat-label">Annualizzato</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">0,99</div>
+                    <div class="stat-label">Sharpe Ratio</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">vs +207%</div>
+                    <div class="stat-label">S&P 500</div>
+                </div>
+            </div>
+            <div class="disclaimer">
+                <strong>⚠️ Disclaimer:</strong> Risultati storici/simulati. <strong>Non garantiscono performance future.</strong> Il settore tech è volatile. Investi solo quanto puoi permetterti di perdere.
+            </div>
+        </div>
+    </section>
+
+    <!-- Cosa Ricevi -->
+    <section id="contenuti">
+        <div class="container">
+            <h2 class="section-title">Cosa Ricevi per 9€/mese</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>✅ Portafoglio Mensile</h3>
+                    <p>15 ticker + pesi + analisi sintetica</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📈 Analisi Settoriale</h3>
+                    <p>Driver di crescita e outlook mercato tech</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🔒 Canale Privato</h3>
+                    <p>Telegram riservato + storico portafogli</p>
+                </div>
+                <div class="feature-card">
+                    <h3>💰 Cancellabile Sempre</h3>
+                    <p>Nessun vincolo, accesso istantaneo</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="iscriviti" style="background: linear-gradient(135deg, #1a472a 0%, #2d5a3a 100%); color: white; text-align: center;">
+        <div class="container">
+            <h2 style="font-size: 3rem; margin-bottom: 1rem;">Pronto a Superare l'S&P 500?</h2>
+            <p style="font-size: 1.3rem; margin-bottom: 2rem; opacity: 0.95;">Investitori con base diversificata cercano satellite growth</p>
+            <div class="price-badge" style="background: #ffd700; color: #1a472a;">Solo 9€/mese</div>
+            <a href="https://buy.stripe.com/..." class="cta-button" style="background: #ffd700; color: #1a472a; font-size: 1.3rem; padding: 1.5rem 4rem;">Inizia Ora →</a>
+            <div style="margin-top: 3rem; opacity: 0.8; max-width: 500px; margin-left: auto; margin-right: auto;">
+                Allocazione consigliata: max 10-20% del portafoglio totale
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p><strong>Tech15 Momentum Lab</strong> © 2025 - Tutti i diritti riservati</p>
+            <p style="margin-top: 0.5rem; opacity: 0.7; font-size: 0.9rem;">
+                Non è consulenza personalizzata. Portafoglio modello. Rischi elevati. Valuta il tuo profilo.
+            </p>
+            <div class="footer-links">
+                <a href="#">Privacy</a>
+                <a href="#">Termini</a>
+                <a href="#">Contatti</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
